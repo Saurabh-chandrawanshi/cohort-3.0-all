@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    gap: 40px;
+    margin-top: 40px;
+}
+.box1{
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+     border: 2px solid #777;
+}
+.box2{
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+    border: 2px solid #777;
+}
+.box3{
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+     border: 2px solid #777;
+}

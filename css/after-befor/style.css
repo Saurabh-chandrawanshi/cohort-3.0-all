@@ -41,3 +41,16 @@ button:hover::after{
     width: 100%;
     color: white;
 }
+
+/* button-2 */
+#button-2{
+     padding: 12px 20px;
+    background: transparent;
+    border: 2px solid rgba(0, 238, 255, 0.855);
+    border-radius: 10px;
+    color:rgba(0, 238, 255, 0.855) ;
+    margin: 20px;
+    font-weight: 700;
+position: relative;
+overflow: hidden;
+}
