@@ -2,7 +2,8 @@
 import Navbar from "./components/Navbar";
 import CartValue from "./components/CartValue";
 import ProductCard from "./components/ProductCard";
-import { useState } from "react";
+import { useContext } from "react";
+import { MyShop } from "./Context/MyWebsite";
 
 const App = () => {
   let Products = [
@@ -161,22 +162,20 @@ const App = () => {
       isFeatured: true,
     },
   ];
-  const [isOpenData, setIsOpenData]= useState(false);
-  const [cartItem, setCartItem]= useState([]);
-  console.log("here is my -|>",cartItem);
+ let {isOpenData} = useContext(MyShop);
   return (
     <div>
       <div>
-        <Navbar setIsOpenData={setIsOpenData} />
+        <Navbar  />
       </div>
    { isOpenData ? 
   ( <div className="flex flex-wrap gap-4 justify-center mt-10">
         
           {Products.map((product) => (
-            <ProductCard key={product.id} setCartItem={setCartItem} product={product} />
+            <ProductCard key={product.id}  product={product} />
           ))}
         
-      </div>): ( <div>   <CartValue cartItem={cartItem} />  </div>)
+      </div>): ( <div>   <CartValue  />  </div>)
 
   }
       

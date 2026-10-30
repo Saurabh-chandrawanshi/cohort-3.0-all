@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { ShoppingBag, Menu, X, ShoppingCart } from "lucide-react";
+import { MyShop } from "../Context/MyWebsite";
 
-const Navbar = ({setIsOpenData}) => {
+const Navbar = () => {
+  let{setIsOpenData} = useContext(MyShop);
   const [isOpen, setIsOpen] = useState(false);
 
    const navLinks = [

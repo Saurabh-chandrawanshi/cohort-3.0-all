@@ -1,7 +1,9 @@
 
-import React from "react";
+import React, { useContext } from "react";
+import { MyShop } from "../Context/MyWebsite";
 
-const CartValue = ({ cartItem, setCartItem }) => {
+const CartValue = () => {
+  let { cartItem, setCartItem } = useContext(MyShop);
   // Remove product from cart
   const removeItem = (id) => {
     setCartItem((previousCart) =>
@@ -9,7 +11,7 @@ const CartValue = ({ cartItem, setCartItem }) => {
     );
   };
 
-  // Increase quantity, stock limit ke saath
+  // Increase quantity, stock limit ke sath
   const increaseQuantity = (id) => {
     setCartItem((previousCart) =>
       previousCart.map((item) =>

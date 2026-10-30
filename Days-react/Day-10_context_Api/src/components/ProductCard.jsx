@@ -1,8 +1,10 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import { ShoppingCart, Star, Heart, Zap } from "lucide-react";
+import { MyShop } from "../Context/MyWebsite";
 
-const ProductCard = ({ product,setCartItem}) => {
+const ProductCard = ({ product}) => {
+  let{setCartItem} = useContext(MyShop);
   const discount = Math.round(
     ((product.price - product.discountPrice) / product.price) * 100
   );
